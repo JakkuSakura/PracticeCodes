@@ -31,7 +31,7 @@ void addedge(int a, int b) {
 int wt[MAXN], fat[MAXN], dep[MAXN], siz[MAXN], hvy[MAXN], id[MAXN], top[MAXN], cnt;
 
 
-#define childs_in(root, j) for(int j##_ = g[root], j; j = es[j##_].t, j##_; j##_ = es[j##_].n)
+#define childs_in(root, j) for(int j##_ = g[root], j; j##_ && (j = es[j##_].t); j##_ = es[j##_].n)
 
 void tcd_dfs1(int x, int f, int depth) {
     dep[x] = depth;
